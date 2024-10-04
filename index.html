@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Приглашение на свадьбу</title>
+</head>
+<body>
+    <div class="container">
+        <section class="intro">
+            <h1>Приглашение на свадьбу</h1>
+            <h2>Андрей</h2>
+            <h2>Екатерина</h2>
+            <p>апрель</p>
+            <p>20</p>
+            <p>2024</p>
+            <button class="video-button">▶️</button>
+        </section>
+
+        <section class="message">
+            <h2>Дорогие родные и близкие!</h2>
+            <p>Мы давно ждали момента, когда сможем разделить с вами самый важный...</p>
+            <h3>ТАЙМИНГ:</h3>
+            <p>15:00 - Сбор гостей</p>
+            <p>15:30 - Торжественная церемония</p>
+            <button class="video-button">▶️</button>
+        </section>
+
+        <section class="venue">
+            <h2>Место проведения</h2>
+            <p>Ресторан «VINOTECA»</p>
+            <p>г. Сургут, ул. Энергетиков, 12</p>
+            <p>Как добраться:</p>
+            <p>Пожалуйста, используйте карту для перехода в навигатор...</p>
+            <button class="video-button">▶️</button>
+        </section>
+
+        <section class="rsvp">
+            <h2>С нетерпением ждём вас</h2>
+            <form>
+                <label for="name">Ваши имя и фамилия:</label>
+                <input type="text" id="name" required>
+
+                <label for="attending">Планируете ли присутствовать?</label>
+                <select id="attending">
+                    <option>Да, с удовольствием!</option>
+                    <option>Нет</option>
+                </select>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="partner">Я буду с парой (имя, фамилия):</label>
+                <input type="text" id="partner">
+
+                <label for="allergy">Есть ли у вас аллергия? Укажите на что:</label>
+                <input type="text" id="allergy">
+
+                <fieldset>
+                    <legend>Буду пить:</legend>
+                    <label><input type="checkbox" value="водка"> водка</label>
+                    <label><input type="checkbox" value="коньяк"> коньяк</label>
+                    <label><input type="checkbox" value="вино белое"> вино белое</label>
+                    <label><input type="checkbox" value="вино красное"> вино красное</label>
+                    <label><input type="checkbox" value="не буду пить алкоголь"> не буду пить алкоголь</label>
+                </fieldset>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

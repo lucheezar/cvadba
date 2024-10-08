@@ -1,74 +1,317 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Приглашение на свадьбу</title>
-</head>
-<body>
-    <div class="container">
-        <section class="intro">
-            <h1>Приглашение на свадьбу</h1>
-            <h2>Андрей</h2>
-            <h2>Екатерина</h2>
-            <p>апрель</p>
-            <p>20</p>
-            <p>2024</p>
-            <button class="video-button">▶️</button>
-        </section>
-
-        <section class="message">
-            <h2>Дорогие родные и близкие!</h2>
-            <p>Мы давно ждали момента, когда сможем разделить с вами самый важный...</p>
-            <h3>ТАЙМИНГ:</h3>
-            <p>15:00 - Сбор гостей</p>
-            <p>15:30 - Торжественная церемония</p>
-            <button class="video-button">▶️</button>
-        </section>
-
-        <section class="venue">
-            <h2>Место проведения</h2>
-            <p>Ресторан «VINOTECA»</p>
-            <p>г. Сургут, ул. Энергетиков, 12</p>
-            <p>Как добраться:</p>
-            <p>Пожалуйста, используйте карту для перехода в навигатор...</p>
-            <button class="video-button">▶️</button>
-        </section>
-
-        <section class="rsvp">
-            <h2>С нетерпением ждём вас</h2>
-            <form>
-                <label for="name">Ваши имя и фамилия:</label>
-                <input type="text" id="name" required>
-
-                <label for="attending">Планируете ли присутствовать?</label>
-                <select id="attending">
-                    <option>Да, с удовольствием!</option>
-                    <option>Нет</option>
+  </head>
+  <body>
+    <video autoplay loop muted class="bgvideo" id="bgvideo">
+      <source src="./video.mp4" type="video/mp4" />
+    </video>
+    <header class="header">
+      <h1 class="header__title">Приглашение на свадьбу</h1>
+      <h2 class="header__title-name">
+        Андрей <span>&</span><span> Елизавета</span>
+      </h2>
+      <p class="header__description">
+        август <span class="header__description-date">29</span>
+        <span>2025</span>
+      </p>
+    </header>
+    <main class="page">
+      <section class="timing__section content">
+        <h4 class="timing__title">Дорогие родные и близкие!</h4>
+        <p class="description">
+          Мы давно ждали момента, когда сможем разделить с вами самый важный и
+          сачастливый день в нашей жизни
+          <span
+            >Совсем скоро состоится наша свадьба! Мы рады пригласить вас стать
+            свидетилями этого торжества и разделить с нами самые яркие
+            моменты!</span
+          >
+        </p>
+        <div class="timing__container">
+          <h3 class="timing title">ТАЙМИНГ</h3>
+          <article class="timing__card">
+            <h4 class="time">9:30</h4>
+            <p class="text__description">Сбор гостей</p>
+          </article>
+          <article class="timing__card">
+            <h4 class="time">10:00</h4>
+            <p class="text__description">Торжественная церемония</p>
+          </article>
+          <article class="timing__card">
+            <h4 class="time">15:00</h4>
+            <p class="text__description">Праздничный ужин</p>
+          </article>
+        </div>
+      </section>
+      <section class="dress-code content">
+        <h3 class="timing title">ДРЕСС-КОД</h3>
+        <p class="description">
+          Для нас главное -ваше присутствие! Но мы будем рады, если в своих
+          нарядах вы поддержите цветовую гамму и стиль нашей свадьбы
+        </p>
+        <div class="color__container">
+          <svg
+            width="320"
+            height="40"
+            viewBox="0 0 320 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20Z"
+              fill="black"
+            />
+            <path
+              d="M40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20Z"
+              fill="black"
+              fill-opacity="0.2"
+            />
+            <path
+              d="M133 20C133 31.0457 124.046 40 113 40C101.954 40 93 31.0457 93 20C93 8.95431 101.954 0 113 0C124.046 0 133 8.95431 133 20Z"
+              fill="#B9927D"
+            />
+            <path
+              d="M85 20C85 31.0457 76.0457 40 65 40C53.9543 40 45 31.0457 45 20C45 8.95431 53.9543 0 65 0C76.0457 0 85 8.95431 85 20Z"
+              fill="white"
+            />
+            <path
+              d="M84.5 20C84.5 30.7696 75.7696 39.5 65 39.5C54.2304 39.5 45.5 30.7696 45.5 20C45.5 9.23045 54.2304 0.5 65 0.5C75.7696 0.5 84.5 9.23045 84.5 20Z"
+              stroke="black"
+              stroke-opacity="0.5"
+            />
+            <path
+              d="M178 20C178 31.0457 169.046 40 158 40C146.954 40 138 31.0457 138 20C138 8.95431 146.954 0 158 0C169.046 0 178 8.95431 178 20Z"
+              fill="#CFAB94"
+            />
+            <path
+              d="M270 20C270 31.0457 261.046 40 250 40C238.954 40 230 31.0457 230 20C230 8.95431 238.954 0 250 0C261.046 0 270 8.95431 270 20Z"
+              fill="#FAEDDF"
+            />
+            <path
+              d="M269.5 20C269.5 30.7696 260.77 39.5 250 39.5C239.23 39.5 230.5 30.7696 230.5 20C230.5 9.23045 239.23 0.5 250 0.5C260.77 0.5 269.5 9.23045 269.5 20Z"
+              stroke="black"
+              stroke-opacity="0.28"
+            />
+            <path
+              d="M223 20C223 31.0457 214.046 40 203 40C191.954 40 183 31.0457 183 20C183 8.95431 191.954 0 203 0C214.046 0 223 8.95431 223 20Z"
+              fill="#E9D3C5"
+            />
+            <path
+              d="M320 20C320 31.0457 311.046 40 300 40C288.954 40 280 31.0457 280 20C280 8.95431 288.954 0 300 0C311.046 0 320 8.95431 320 20Z"
+              fill="#FFF5ED"
+            />
+            <path
+              d="M319.5 20C319.5 30.7696 310.77 39.5 300 39.5C289.23 39.5 280.5 30.7696 280.5 20C280.5 9.23045 289.23 0.5 300 0.5C310.77 0.5 319.5 9.23045 319.5 20Z"
+              stroke="black"
+              stroke-opacity="0.35"
+            />
+          </svg>
+        </div>
+        <div class="image__containet">
+          <article class="image__card">
+            <img
+              class="image"
+              src="/images/girl-in-theskirt.jpg"
+              alt="Девушка в юбке"
+            />
+          </article>
+          <article class="image__card">
+            <img
+              class="image"
+              src="/images/man-inthe-smoking.jpg"
+              alt="Мужчина в смокинге"
+            />
+          </article>
+          <article class="image__card">
+            <img
+              class="image"
+              src="/images/woman-ina-dress.jpg"
+              alt="Женщина в платье"
+            />
+          </article>
+          <article class="image__card">
+            <img
+              class="image"
+              src="/images/girl-in-theskirt.jpg"
+              alt="Девушка в юбке"
+            />
+          </article>
+          <article class="image__card">
+            <img
+              class="image"
+              src="/images/man-inthe-smoking.jpg"
+              alt="Мужчина в смокинге"
+            />
+          </article>
+          <article class="image__card">
+            <img
+              class="image"
+              src="/images/woman-ina-dress.jpg"
+              alt="Женщина в платье"
+            />
+          </article>
+        </div>
+      </section>
+      <section class="prompt__section content">
+        <h3 class="prompt title">ПОДСКАЗКИ</h3>
+        <p class="description">
+          Мы договариваемся, что после получения приглашения у вас может
+          появиться ряд вопросов
+        </p>
+        <div class="prompt__card-list">
+          <article class="prompt__card">
+            <img
+              class="prompt-image"
+              src="/images/firework.png"
+              alt="Феерверк"
+            />
+            <h4 class="prompt__card-title">Сюрпризы</h4>
+            <p class="prompt__description">
+              Возьмите с собой отличное настроение! Приветствуются ваши
+              поздравления, активное участие в интерактивах, творческие
+              выступления! Вы можете обратиться к нашему организатору для
+              воплощения своих идей
+            </p>
+          </article>
+          <article class="prompt__card">
+            <img class="prompt-image" src="/images/bouquet.webp" alt="Цветы" />
+            <h4 class="prompt__card-title">Цветы</h4>
+            <p class="prompt__description">
+              Наш праздник будет окружен изобилием цветов, поэтому приятным
+              комплиментом для нас вместо букеты будет бутылка вашего любимого
+              вина, которую мы откроем на ближайшем совместном празднике.
+            </p>
+          </article>
+          <article class="prompt__card">
+            <img class="prompt-image" src="/images/gift.jpg" alt="Подарок" />
+            <h4 class="prompt__card-title">Что дарить?</h4>
+            <p class="prompt__description">
+              В качестве подарка будем рады вкладу в бюджет нашей семьи. Он
+              точно поможет воплотить нашу мечту в реальность!
+            </p>
+          </article>
+          <article class="prompt__card">
+            <img class="prompt-image" src="/images/girl.webp" alt="Девушка" />
+            <h4 class="prompt__card-title">Что делать если...?</h4>
+            <p class="prompt__description">
+              Если у вас появились какие-либол вопросы, вам с радостью поможет
+              наш замечательный организатор:Вениамин: +7 900 700 20 25
+            </p>
+          </article>
+          <article class="prompt__card">
+            <img class="prompt-image" src="/images/hands.jpg" alt="Руки" />
+            <h4 class="prompt__card-title">Маленькие гости</h4>
+            <p class="prompt__description">
+              Дорогие гости, мы будем благодарнеы, если вы посвятите нашему дню
+              все внимание и энергию, сможете по-настоящему отдохнуть и
+              развлечься. Поэтому будем признательны, если наш праздник пройдет
+              в кругу взрослых.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="location__section content">
+        <h3 class="location title">ПОДСКАЗКИ</h3>
+        <h5 class="location__title">
+          Ресторан “Vindeta”
+          <span class="city"> г. Краснодар ул. Московская, 14</span>
+        </h5>
+        <p class="location__description">
+          Как добраться:
+          <span
+            >Пожалуйста, используйте карту для перехода в навигатор, чтобы
+            добраться до местоположения</span
+          >
+        </p>
+        <img class="image__building" src="/images/building.webp" alt="Сдание" />
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7702b6905c4eae999db1a794c1059e8ef90983bbfc8bd388e7ce896e7c01f9e0&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true&amp;apikey=28994462-5e27-48ef-93d3-73d13007acc5>">
+        </script>
+      </section>
+      <section class="guests">
+        <h2>С нетерпением ждём вас</h2>
+        <form action="#" class="rsvp" name="submit-to-google-sheet">
+            <label for="name">Ваши имя и фамилия:
+            <input class="block" type="text" name="name" id="name" required> </label>  
+            <label class="partner" for="attending">Планируете ли присутствовать?
+            <select class="options" name="attending" id="attending" required> 
+                <option value='Да'>Да, с удовольствием!</option>
+                <option value='Нет'>Нет</option>
+            </select>
+        </label>
+            <div class="phone">
+            <label for="phone">Телефон:</label>
+            <input class="block" type="tel" name="phone" id="phone">
+        </div>
+        <label class="partner" for="partner">Сколько вас будет человек:
+                <select class="options" name="partner" id="partner" required>
+                    <option value='1'>Один</option>
+                    <option value='2'>Двое</option>
+                    <option value='3'>Трое</option>
+                    <option value='4'>Четверо</option>
                 </select>
-
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" required>
-
-                <label for="partner">Я буду с парой (имя, фамилия):</label>
-                <input type="text" id="partner">
-
-                <label for="allergy">Есть ли у вас аллергия? Укажите на что:</label>
-                <input type="text" id="allergy">
-
-                <fieldset>
-                    <legend>Буду пить:</legend>
-                    <label><input type="checkbox" value="водка"> водка</label>
-                    <label><input type="checkbox" value="коньяк"> коньяк</label>
-                    <label><input type="checkbox" value="вино белое"> вино белое</label>
-                    <label><input type="checkbox" value="вино красное"> вино красное</label>
-                    <label><input type="checkbox" value="не буду пить алкоголь"> не буду пить алкоголь</label>
-                </fieldset>
-
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
-    </div>
-</body>
+            </label>                        
+            <label for="allergy">Есть ли у вас аллергия? Укажите на что:
+            <input class="block" type="text" name="allergy" id="allergy"> </label> 
+            <fieldset name="alcohol" >
+                <h2>Буду пить:</h2>
+                <ul class="alcohol__list">
+                    <li class="card">
+                        <input class="checkbox" type="checkbox" name="vodka" id="vodka">
+                        <label for="vodka">Водка</label>                                                             
+                    </li>
+                    <li class="card">
+                        <input class="checkbox" type="checkbox" name="kon9k" id="kon9k">
+                        <label for="kon9k">Коньяк</label>                                                               
+                    </li>
+                    <li class="card">
+                        <input class="checkbox" type="checkbox" value="vino-beloe" name="vino-beloe" id="vino-beloe">
+                        <label for="vino-beloe">Вино белое</label>                                                              
+                    </li>
+                    <li class="card">
+                        <input class="checkbox" type="checkbox" value="vino-krasnoe" name="vino-krasnoe" id="vino-krasnoe">
+                        <label for="vino-krasnoe">Вино красное</label>                                                        
+                    </li>
+                    <li class="card">
+                        <input class="checkbox" type="checkbox" value="wampanskoe"  name="wampanskoe" id="wampanskoe">
+                        <label for="wampanskoe">Шампанское</label>                                                              
+                    </li>
+                    <li class="card">
+                        <input class="checkbox" type="checkbox" value="noalcohol" name="noalcohol" id="noalcohol">
+                        <label for="noalcohol">Не буду пить алкоголь</label>                                                           
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submit">Отправить</button>
+            <span id="sendText"></span>
+        </form>
+    </section>
+    </main>
+    <footer class="footer"> <h3 class="footer__title"> Ваши <span>Денис и Александра</span></h3></footer>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbw3eASB9rDLjYMAEfRJ3PNnYcymsqd6j7b0msOwf4YEec0JFL4mip_p6_ZkAXQh7XCG/exec'
+                const form = document.forms['submit-to-google-sheet']
+const sendText = document.getElementById('sendText')     
+                form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response =>{ 
+                    sendText.innerHTML = "Спасибо за ваш ответ!"
+                setTimeout(function(){
+                    sendText.innerHTML = ""
+                }, 5000)
+                form.reset()
+                })
+                .catch(error => console.error('Ошибка', error.message))
+             })
+            </script>
+  </body>
 </html>

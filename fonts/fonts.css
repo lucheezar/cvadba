@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "Antarctic";
+  src: url("./Antarctic.woff2") format("woff2"),
+    url("./Antarctic.woff") format("woff");
+}

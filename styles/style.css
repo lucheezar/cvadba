@@ -1,3 +1,7 @@
+body {
+  max-width: 375px;
+}
+
 .bgvideo {
   position: fixed;
   z-index: -1;
@@ -22,7 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-family: var(--font-family);
+  font-family: var(--font-text);
   font-weight: 400;
   font-size: 40px;
   color: var(--title-color);
@@ -45,11 +49,11 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 100px;
 }
 
 .content {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 30px;
   font-family: var(--font-family);
@@ -62,6 +66,7 @@
   font-weight: 400;
   font-size: 24px;
   text-align: center;
+  margin-block-start: 100px;
 }
 
 .description {
@@ -73,10 +78,27 @@
   margin-inline: 26px;
 }
 
+.timing__section::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 30%;
+  position: absolute;
+  z-index: -1;
+}
+
+.timing__title {
+  margin-block-start: 30px;
+}
+
 .timing__container {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 30px;
+  margin-top: 20px;
+  margin-block-end: 100px;
 }
 
 .time {
@@ -84,6 +106,19 @@
   font-weight: 700;
   font-size: 16px;
   color: var(--title-color);
+}
+
+.dress-code::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  z-index: -1;
+}
+
+.dress__code-title {
+  margin-block-start: 30px;
 }
 
 .color__container {
@@ -106,6 +141,9 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+.prompt__section {
+  margin-inline: 10px;
+}
 
 .prompt__card-list {
   display: flex;
@@ -146,6 +184,10 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 208%;
+}
+
+.number {
+  text-underline-position: under;
 }
 
 .location__section {
@@ -198,7 +240,6 @@
 .guests button {
   width: 100%;
   height: 35px;
-  outline: none;
   border: none;
   margin-top: 20px;
   cursor: pointer;
@@ -241,8 +282,7 @@ label {
 }
 
 .card {
-  display: grid;
-  grid-template-columns: 28px 1fr;
+  display: flex;
   justify-items: start;
 }
 
@@ -257,33 +297,72 @@ label {
   text-align: center;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-  position: relative;
-  background: #f0f0f0;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
   
-  .options {
-    position: relative;
-    width: 350px;
-    appearance: none;
-    background: Transparent;
-    color: #000;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    padding: 10px 9px;
-    margin: 0;
-    border-radius: 3px;
-    cursor: pointer;
-    height: 38px;
-    outline: 1px solid #000;
-    text-align: center;
+.options {
+  position: relative;
+  width: 350px;
+  appearance: none;
+  background: Transparent;
+  color: #000;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 10px 9px;
+  margin: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 38px;
+  outline: 1px solid #000;
+  text-align: center;
+}
+  
+  .alcohol__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .checkbox {
+  label input[type=checkbox] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+
+  .search__form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .checkbox + .pseudo-checkbox {
+    display: flex;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox[type='checkbox']:checked + span::after {
+    content:'';
+    background-color: #000;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    border: 2px solid #c5bebe;
+    width: 18px;
+    height: 18px;
+  }
+
+  .button {
     background-color: transparent;
+    outline: 1px solid #000;
   }
 
   .footer {
@@ -294,4 +373,5 @@ body {
   .footer__title {
     display:flex;
     flex-direction: column;
+    margin-block: 30px;
   }

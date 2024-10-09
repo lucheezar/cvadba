@@ -3,3 +3,15 @@
   src: url("./Antarctic.woff2") format("woff2"),
     url("./Antarctic.woff") format("woff");
 }
+
+@font-face {
+  font-family: "ClassicaOne";
+  src: url("./ClassicaOne.woff2") format("woff2"),
+    url("./ClassicaOne.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Felidae";
+  src: url("./Felidae-Regular.woff2") format("woff2"),
+    url("./Felidae-Regular.woff") format("woff");
+}

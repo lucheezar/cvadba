@@ -1,7 +1,3 @@
-body {
-  max-width: 375px;
-}
-
 /* * {
   outline: 1px solid green;
 } */
@@ -35,9 +31,9 @@ body {
 .header__title-name {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   font-family: var(--font-text);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 40px;
   color: var(--title-color);
 }
@@ -45,11 +41,10 @@ body {
 .header__description {
   display: flex;
   flex-direction: column;
-  font-family: var(--font-family);
-  font-weight: 400;
+  font-family: var(--font-date);
+  font-weight: 600;
   font-size: 16px;
   color: var(--title-color);
-  font-weight: 400;
 }
 
 .header__description-date {
@@ -118,13 +113,18 @@ body {
   color: var(--title-color);
 }
 
-.dress-code::after {
+.dress-code::after, .prompt__section:after, .location__section:after {
   content: " ";
   width: 100%;
   height: 100%;
   background-color: #fff;
   position: absolute;
   z-index: -1;
+}
+
+.dress-code {
+  display: flex;
+  align-items: center ;
 }
 
 .dress__code-title {
@@ -135,12 +135,17 @@ body {
   margin-inline: 27px;
 }
 
-.image__containet {
+.image__container {
   display: flex;
   flex-wrap: wrap;
   column-gap: 16px;
   row-gap: 26px;
   margin-inline: 21px;
+  margin-block-end: 60px;
+}
+
+.image__card {
+  flex-grow: 1;
 }
 
 .image {
@@ -152,13 +157,15 @@ body {
 }
 
 .prompt__section {
-  margin-inline: 10px;
+  position: relative;
 }
 
 .prompt__card-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-inline: 12px;
+  margin-block-end: 60px;
 }
 
 .prompt__card {
@@ -200,8 +207,12 @@ body {
   text-underline-position: under;
 }
 
-.location__section {
-  margin-inline: 12px;
+.location__container {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 10px;
+  gap: 20px;
+  margin-block-end: 60px;
 }
 
 .location__title {
@@ -211,7 +222,7 @@ body {
   text-align: left;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16px; 
 }
 
 .location__description {
@@ -248,8 +259,6 @@ body {
 }
 
 .guests button {
-  width: 100%;
-  height: 35px;
   border: none;
   margin-top: 20px;
   cursor: pointer;
@@ -373,6 +382,9 @@ label {
   .button {
     background-color: transparent;
     outline: 1px solid #000;
+    width: 200px;
+    height: 35px;
+    align-self: center;
   }
 
   .footer {
@@ -384,4 +396,5 @@ label {
     display:flex;
     flex-direction: column;
     margin-block: 30px;
+    font-family: var(--font-text);
   }

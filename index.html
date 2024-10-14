@@ -11,9 +11,6 @@
     <title>Приглашение на свадьбу</title>
   </head>
   <body>
-    <video autoplay loop muted class="bgvideo" id="bgvideo">
-      <source src="./video.mp4" type="video/mp4" />
-    </video>
     <header class="header">
       <h1 class="header__title">Приглашение на свадьбу</h1>
       <h2 class="header__title-name">
@@ -24,6 +21,9 @@
         <span>2025</span>
       </p>
     </header>
+    <video autoplay loop muted playsinline class="bgvideo" id="bgvideo">
+      <source src="./video.mp4" type="video/mp4" >
+    </video>
     <main class="page">
       <section class="timing__section content">
         <h4 class="timing__title">Дорогие родные и близкие!</h4>
@@ -387,5 +387,6 @@
           .catch((error) => console.error("Ошибка", error.message));
       });
     </script>
+    <script src="./script/script.js"></script>
   </body>
 </html>

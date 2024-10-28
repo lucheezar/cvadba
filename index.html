@@ -11,11 +11,11 @@
     <title>Приглашение на свадьбу</title>
   </head>
   <body>
-<!--  -->
+    <!--  -->
     <dialog id="dialog-id" scrolllock open>
       <div class="preview">
       <form method="dialog">
-        <button class="close-button">
+        <button class="button close-button">
           <span class="visually-hidden">Перейти к приглашению</span>
         </button>
       </form>
@@ -33,10 +33,10 @@
       </p>
     </header>
     <video autoplay loop muted playsinline class="bgvideo" id="bgvideo">
-      <source src="./video.mp4" type="video/mp4" >
+      <source src="./video.mp4" type="video/mp4" />
     </video>
     <main class="page">
-      <section class="timing__section content">
+      <section class="timing__section content element-animation">
         <h4 class="timing__title">Дорогие родные и близкие!</h4>
         <p class="description timing__description">
           Мы давно ждали момента, когда сможем разделить с вами самый важный и
@@ -63,7 +63,7 @@
           </article>
         </div>
       </section>
-      <section class="dress-code content">
+      <section class="dress-code content element-animation">
         <h3 class="timing dress__code-title">ДРЕСС-КОД</h3>
         <p class="description">
           Для нас главное -ваше присутствие! Но мы будем рады, если в своих
@@ -172,7 +172,7 @@
           </article>
         </div>
       </section>
-      <section class="prompt__section content">
+      <section class="prompt__section content element-animation">
         <h3 class="prompt title">ПОДСКАЗКИ</h3>
         <p class="description">
           Мы договариваемся, что после получения приглашения у вас может
@@ -233,7 +233,7 @@
           </article>
         </div>
       </section>
-      <section class="location__section content">
+      <section class="location__section content element-animation">
         <h3 class="location title">Место проведения</h3>
         <div class="location__container">
           <h5 class="location__title">
@@ -260,7 +260,7 @@
           ></script>
         </div>
       </section>
-      <section class="guests">
+      <section class="guests element-animation">
         <h2>С нетерпением ждём вас</h2>
         <form action="#" class="rsvp" name="submit-to-google-sheet">
           <label class="form" for="name"

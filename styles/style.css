@@ -124,6 +124,7 @@ dialog {
 /* Анимация  */
 .element-animation {
   opacity: 0;
+  transform: translateY(20px);
 }
 
 .element-animation.element-show {

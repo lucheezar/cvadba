@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   window.addEventListener('touchstart', playVideo, { once: true });
 });
 
+// анимация скрола
+
 function onEntry(entry) {
     entry.forEach(change => {
       if (change.isIntersecting) {

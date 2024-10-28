@@ -2,6 +2,10 @@
   outline: 1px solid green;
 } */
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 .bgvideo {
   position: fixed;
   z-index: -1;

@@ -17,13 +17,13 @@ body:has(dialog[open]) {
   height: auto;
 }
 
-/* dialog {
+dialog {
     width: 100%;
     background-image: url(../images/ring.jpg);
     background-size: cover;
     background-position: center;
     transition: opacity 2s ease-in-out;
-} */
+}
 
 .preview {
   width: 100%;
@@ -36,7 +36,7 @@ body:has(dialog[open]) {
 
 /* слайд */
 
-dialog {
+/* dialog {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ dialog {
 .slider {
   -webkit-appearance: none;
   width: 50%;
-  min-width: 600px; /*эта строка нужна только чтобы не ломалось отображение в сниппете*/
+  min-width: 600px; эта строка нужна только чтобы не ломалось отображение в сниппете 
   background-color: transparent;
   pointer-events: none;
 }
@@ -73,7 +73,6 @@ dialog {
   width: 100px;
   aspect-ratio: 1;
   -webkit-appearance: none;
-
   pointer-events: all;
 }
 
@@ -100,7 +99,7 @@ dialog {
   background-color: transparent;
   outline: 1px solid #000;
   z-index: -1;
-}
+} */
 
 /*  */
 

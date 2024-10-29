@@ -37,3 +37,26 @@ function onEntry(entry) {
   for (let elm of elements) {
     observer.observe(elm);
   }
+
+  // анимация слайда
+  
+  function modalClose (modal) {
+    modal.classList.add('disable');
+    modal.close();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('dialog');
+    const slider = modal.querySelector('.slider');
+    modal.showModal();
+
+    slider.addEventListener('change', evt => {
+        if (evt.target.value !== '100') {
+            evt.target.value = 0;
+            return;
+        }
+
+        modalClose(modal);
+    });
+
+});

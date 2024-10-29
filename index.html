@@ -12,16 +12,27 @@
   </head>
   <body>
     <!--  -->
-    <dialog id="dialog-id" scrolllock open>
+    <!-- <dialog id="dialog-id" scrolllock open>
       <div class="preview">
-      <form method="dialog">
-        <button class="button close-button">
-          <span class="visually-hidden">Перейти к приглашению</span>
-        </button>
-      </form>
-    </div>
-    </dialog>
+        <form method="dialog">
+          <button
+            type="button"
+            onclick="window['dialog-id'].close()"
+            class="button close-button"
+          >
+            <span class="visually-hidden">Перейти к приглашению</span>
+          </button>
+        </form>
+      </div>
+    </dialog> -->
     <!--  -->
+
+    <dialog>
+      <div class="preview">
+      <input class="slider" type="range" value="0" min="0" max="100" step="1">
+    </div>
+  </dialog>
+
     <header class="header">
       <h1 class="header__title">Приглашение на свадьбу</h1>
       <h2 class="header__title-name">

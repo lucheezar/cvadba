@@ -17,13 +17,13 @@ body:has(dialog[open]) {
   height: auto;
 }
 
-dialog {
+/* dialog {
     width: 100%;
     background-image: url(../images/ring.jpg);
     background-size: cover;
     background-position: center;
     transition: opacity 2s ease-in-out;
-}
+} */
 
 .preview {
   width: 100%;
@@ -33,6 +33,76 @@ dialog {
   justify-content: center;
   align-items: center;
 }
+
+/* слайд */
+
+dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/ring.jpg);
+  background-size: cover;
+  background-position: center;
+  border: none;
+}
+
+.disable {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  min-width: 600px; /*эта строка нужна только чтобы не ломалось отображение в сниппете*/
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.slider:focus {
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  background: #ecf0f1;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 100px;
+  aspect-ratio: 1;
+  -webkit-appearance: none;
+
+  pointer-events: all;
+}
+
+.slider::before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(100px, 0);
+  background-color: transparent;
+  z-index: -1;
+}
+
+.slider::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-100px, 0);
+  background-color: transparent;
+  outline: 1px solid #000;
+  z-index: -1;
+}
+
+/*  */
 
 
 

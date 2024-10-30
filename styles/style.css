@@ -17,12 +17,22 @@ body:has(dialog[open]) {
   height: auto;
 }
 
-dialog {
+.dialog {
     width: 100%;
     background-image: url(../images/ring.jpg);
     background-size: cover;
     background-position: center;
     transition: opacity 2s ease-in-out;
+    border: none;
+}
+
+
+dialog::backdrop {
+  position: fixed;
+  inset: 0px;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
 }
 
 .preview {

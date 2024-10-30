@@ -37,26 +37,40 @@ function onEntry(entry) {
   for (let elm of elements) {
     observer.observe(elm);
   }
+  
 
   // анимация слайда
   
-  function modalClose (modal) {
-    modal.classList.add('disable');
-    modal.close();
+//   function modalClose (modal) {
+//     modal.classList.add('disable');
+//     modal.close();
+// }
+
+// window.addEventListener('DOMContentLoaded', () => {
+//     const modal = document.querySelector('dialog');
+//     const slider = modal.querySelector('.slider');
+//     modal.showModal();
+
+//     slider.addEventListener('change', evt => {
+//         if (evt.target.value !== '100') {
+//             evt.target.value = 0;
+//             return;
+//         }
+
+//         modalClose(modal);
+//     });
+
+// });
+
+// закрытия диалогового окна если клацать мимо
+dialogElement.addEventListener("click", closeOnBackDropClick)
+
+function closeOnBackDropClick({ currentTarget, target }) {
+  const dialogElement = currentTarget
+  const isClickedOnBackDrop = target === dialogElement
+  if (isClickedOnBackDrop) {
+    dialogElement.close()
+  }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const modal = document.querySelector('dialog');
-    const slider = modal.querySelector('.slider');
-    modal.showModal();
-
-    slider.addEventListener('change', evt => {
-        if (evt.target.value !== '100') {
-            evt.target.value = 0;
-            return;
-        }
-
-        modalClose(modal);
-    });
-
-});
+// 

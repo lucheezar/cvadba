@@ -61,16 +61,3 @@ function onEntry(entry) {
 //     });
 
 // });
-
-// закрытия диалогового окна если клацать мимо
-dialogElement.addEventListener("click", closeOnBackDropClick)
-
-function closeOnBackDropClick({ currentTarget, target }) {
-  const dialogElement = currentTarget
-  const isClickedOnBackDrop = target === dialogElement
-  if (isClickedOnBackDrop) {
-    dialogElement.close()
-  }
-}
-
-// 

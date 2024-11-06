@@ -243,7 +243,7 @@ dialog::backdrop {
   color: var(--title-color);
 }
 
-.dress-code::after, .prompt__section:after, .location__section:after {
+.dress-code:after, .prompt__section:after, .location__section:after {
   content: " ";
   width: 100%;
   height: 100%;

@@ -37,27 +37,17 @@ function onEntry(entry) {
   for (let elm of elements) {
     observer.observe(elm);
   }
-  
 
-  // анимация слайда
-  
-//   function modalClose (modal) {
-//     modal.classList.add('disable');
-//     modal.close();
-// }
+// анимация
+const heart = document.getElementById('heart');
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     const modal = document.querySelector('dialog');
-//     const slider = modal.querySelector('.slider');
-//     modal.showModal();
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY; // Получаем значение прокрутки по вертикали
+            const threshold = 100; // Пороговое значение для добавления класса
 
-//     slider.addEventListener('change', evt => {
-//         if (evt.target.value !== '100') {
-//             evt.target.value = 0;
-//             return;
-//         }
-
-//         modalClose(modal);
-//     });
-
-// });
+            if (scrollY > threshold) {
+                heart.classList.add('show'); // Добавляем класс, если прокрутка больше порогового значения
+            } else {
+                heart.classList.remove('show'); // Убираем класс, если прокрутка меньше порогового значения
+            }
+        });
